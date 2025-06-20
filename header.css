@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.LOGO {
+  width: 150x;
+  height: 100px;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+header h1 {
+  color: #391053;
+  font-size: 33.6px;
+  font-weight: 900;
+  margin-left: 0;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.login-form {
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  display: block;
+  font-size: 16.8px;
+  color: #391053;
+  margin-bottom: 2px;
+}
+
+.login-form input {
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 10.5px;
+  border: 1.05px solid #000;
+}
+
+.login-form button {
+  width: 202px;
+  height: 43px;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 10.5px;
+  border: 1.05px solid #FFF;
+  background-color: #391053;
+  color: white;
+  cursor: pointer;
+}
+
+.menu-bar {
+  margin-top: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5A2675;
+  padding: 30px 0;
+  color: white;
+}
+
+.menu-bar a {
+  color: white;
+  text-decoration: none;
+  padding: 0 40px;
+  font-weight: bold;
+}
+
+.divider {
+  background-color: white;
+}
+
+
+.menu-bar .divider {
+  height: 25px;
+  width: 1px;
+}
+

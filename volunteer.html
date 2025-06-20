@@ -1,0 +1,1768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SafeSpace PH - Homepage</title>
+  <style>
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f0f2f5;
+    }
+
+    * {
+      -webkit-font-smoothing: antialiased;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    button:focus-visible {
+      outline: 2px solid #4a90e2 !important;
+      outline: -webkit-focus-ring-color auto 5px !important;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      gap: 40px;
+      padding-bottom: 10px;
+    }
+
+    .LOGO {
+      width: 150x;
+      height: 100px;
+      margin-left: 20px;
+      margin-right: 10px;
+    }
+
+    header h1 {
+      color: #391053;
+      font-size: 33.6px;
+      font-weight: 900;
+      margin-left: 0;
+    }
+
+    .branding {
+      display: flex;
+      align-items: center;
+      gap: 0;
+    }
+
+    .login-form {
+      display: flex;
+      align-items: flex-end;
+      gap: 15px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      display: block;
+      font-size: 16.8px;
+      color: #391053;
+      margin-bottom: 2px;
+    }
+
+    .login-form input {
+      padding: 8px;
+      font-size: 14px;
+      border-radius: 10.5px;
+      border: 1.05px solid #000;
+    }
+
+    .login-form button {
+      width: 202px;
+      height: 43px;
+      padding: 8px 16px;
+      font-size: 14px;
+      border-radius: 10.5px;
+      border: 1.05px solid #FFF;
+      background-color: #391053;
+      color: white;
+      cursor: pointer;
+    }
+
+    .menu-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #5A2675;
+      padding: 30px 0;
+      color: white;
+    }
+
+    .menu-bar a {
+      color: white;
+      text-decoration: none;
+      padding: 0 40px;
+      font-weight: bold;
+    }
+
+    .divider {
+      background-color: white;
+    }
+
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .homepage-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px 20px;
+      gap: 40px;
+      background-image: url('https://imgur.com/a/eXLECDp');
+      background-size: cover;
+      background-position: center;
+      min-height: 700px;
+      position: relative;
+      color: white;
+    }
+
+    .homepage-content::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .hero-section,
+    .REGISTER {
+      z-index: 2;
+    }
+
+    .hero-section {
+      flex: 1;
+      min-width: 300px;
+      max-width: 600px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .welcome-heading {
+      font-family: "Inter-SemiBold", Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      color: #FFF;
+      font-size: 75px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      margin-left: -100px;
+    }
+
+    .hero-description {
+      font-family: "Inter-Regular", Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      color: #FFF;
+      font-size: 30px;
+      line-height: 1.5;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      margin-left: -100px;
+    }
+
+    .hero-image-placeholder {
+      width: 150;
+      height: 374px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      margin-top: 20px;
+      margin-left: -100px;
+    }
+
+
+    .REGISTER {
+      width: 100%;
+      max-width: 528px;
+      min-width: 320px;
+      height: auto;
+      min-height: 688px;
+      margin: 0;
+      border-radius: 13.5px;
+      border: 3.375px solid #FFF;
+      background: #FFF;
+      box-sizing: border-box;
+      padding: 32px 24px 24px 24px;
+      box-shadow: 0 4px 32px rgba(0, 0, 0, 0.08);
+      color: #000;
+      margin-left: 50px;
+    }
+
+    .REGISTER .text-wrapper {
+      display: block;
+      margin-bottom: 4px;
+      font-family: "Inter-Regular", Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      color: #000000;
+      font-size: 16.2px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .REGISTER .rectangle,
+    .REGISTER .input-mobile,
+    .REGISTER select.year-dropdown,
+    .REGISTER select.month-dropdown,
+    .REGISTER select.day-dropdown {
+      width: 100%;
+      height: 41px;
+      border-radius: 6.75px;
+      border: 1.35px solid #000;
+      background: #fff;
+      font-size: 16.2px;
+      font-family: "Inter-Regular", Helvetica, Arial, sans-serif;
+      padding: 0 12px;
+      box-sizing: border-box;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .REGISTER .proceed-btn {
+      width: 100%;
+      height: 69px;
+      background: #5A2675;
+      color: #fff;
+      font-size: 27px;
+      font-family: "Inter-SemiBold", Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      border: none;
+      border-radius: 13.5px;
+      cursor: pointer;
+      box-shadow: 0px 2.7px 2.7px #00000040;
+      transition: background 0.2s;
+      margin-top: 16px;
+    }
+
+    .REGISTER .proceed-btn:hover {
+      background: #431e5a;
+    }
+
+    .REGISTER .text-wrapper-4 {
+      font-family: "Inter-SemiBold", Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      color: #000000;
+      font-size: 32.4px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+      margin-bottom: 24px;
+    }
+
+    .REGISTER .text-wrapper-14 {
+      font-family: "Inter-Regular", Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      color: #000000;
+      font-size: 16.2px;
+      letter-spacing: 0;
+      line-height: normal;
+      text-decoration: underline;
+      margin-left: 8px;
+    }
+
+    .register-divider {
+      border: none;
+      border-top: 3px solid #000;
+      margin: 24px 0;
+    }
+
+    /* Safe Spaces Act Section Styles */
+    .safe-spaces-section {
+      width: 100%;
+      /* Take full width */
+      background-color: #ffffff;
+      /* Dark purple background */
+    }
+
+    .safe-spaces-content-wrapper {
+      display: flex;
+      max-width: 1440px;
+      /* Constrain content to main container width */
+      margin: 0 auto;
+      /* Center the content */
+      padding: 0 20px;
+      /* Add horizontal padding matching container */
+      gap: 40px;
+      /* Space between columns */
+      color: #333333;
+      /* White text for the whole section */
+      align-items: center;
+      /* Vertically align items */
+      flex-wrap: wrap;
+      /* Allow wrapping on smaller screens */
+    }
+
+    .left-panel {
+      flex: 1;
+      min-width: 300px;
+      /* Minimum width for responsiveness */
+      padding-right: 20px;
+      /* Space from the right panel */
+    }
+
+    .know-your-rights {
+      font-size: 0.9em;
+      font-weight: 600;
+      color: #333333;
+      /* White text */
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .safe-spaces-title {
+      font-size: 2.8em;
+      font-weight: 700;
+      color: #333333;
+      /* White text */
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+
+    .republic-act {
+      font-size: 1.2em;
+      font-weight: 400;
+      color: #333333;
+      /* White text */
+      margin-bottom: 20px;
+    }
+
+    .description {
+      font-size: 1em;
+      color: #333333;
+      /* White text */
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .learn-button {
+      background-color: #3d0033;
+      /* White background */
+      color: #ffffff;
+      /* Dark purple text */
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1em;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: fit-content;
+    }
+
+    .learn-button:hover {
+      background-color: #b97eba;
+      /* Light gray on hover */
+    }
+
+    .right-panel {
+      flex: 1;
+      min-width: 300px;
+      /* Minimum width for responsiveness */
+      background-color: #ffffff;
+      /* White background as per image */
+      padding: 40px;
+      border-radius: 10px;
+      /* Rounded corners for the white box */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #333333;
+      /* Darker text inside the white panel */
+    }
+
+    .chart-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 20px;
+    }
+
+    .annual-harassment {
+      font-size: 1.3em;
+      font-weight: 600;
+      color: #333333;
+    }
+
+    .number-of-cases {
+      font-size: 0.9em;
+      color: #666666;
+      margin-top: 5px;
+    }
+
+    .year-label {
+      font-size: 0.9em;
+      color: #666666;
+    }
+
+    .bar-chart {
+      display: flex;
+      align-items: flex-end;
+      gap: 15px;
+      height: 150px;
+      margin-bottom: 40px;
+      border-bottom: 1px solid #ccc;
+      /* Add a line at the bottom of the chart area */
+      padding-bottom: 10px;
+    }
+
+    .bar {
+      flex-grow: 1;
+      background-color: #5A2675;
+      /* Dark purple bars */
+      border-radius: 3px 3px 0 0;
+      /* Rounded top corners only */
+      width: 35px;
+    }
+
+    .bar:nth-child(1) {
+      height: 80%;
+    }
+
+    .bar:nth-child(2) {
+      height: 65%;
+    }
+
+    .bar:nth-child(3) {
+      height: 50%;
+    }
+
+    .bar:nth-child(4) {
+      height: 60%;
+    }
+
+    .bar:nth-child(5) {
+      height: 55%;
+    }
+
+    .bar:nth-child(6) {
+      height: 75%;
+    }
+
+    .bar:nth-child(7) {
+      height: 60%;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+
+    .metric-card {
+      background-color: #ffffff;
+      /* White background for the card */
+      border-radius: 8px;
+      padding: 15px 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100px;
+      border: 1px solid #ddd;
+      /* Light border around the card */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      /* subtle shadow */
+    }
+
+    .metric-label {
+      font-size: 0.9em;
+      color: #333333;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .metric-value {
+      font-size: 1.8em;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 70px;
+      /* Larger circle */
+      height: 70px;
+      /* Larger circle */
+      border-radius: 50%;
+      color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      border: 5px solid;
+      /* For the border colors */
+      background-color: #5A2675;
+      /* Default background for the circles */
+    }
+
+    /* Specific border colors for each metric value */
+    .metric-value.blue {
+      border-color: #5A2675;
+      /* Dark purple for blue */
+    }
+
+    .metric-value.green {
+      border-color: #8A2BE2;
+      /* Medium purple for green */
+    }
+
+    .metric-value.orange {
+      border-color: #BF40BF;
+      /* Lighter purple for orange */
+    }
+
+    /*Volunteer Lawyers Section Styles */
+    .volunteers-section {
+      text-align: center;
+      width: 100%;
+      padding: 20px 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+    }
+
+    .section-title {
+      font-family: "Inter-SemiBold", Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 45px;
+      color: #391053;
+      margin-bottom: 10px;
+    }
+
+    .section-subtitle {
+      font-size: 1.1em;
+      color: #666;
+      margin-bottom: 40px;
+    }
+
+    .volunteer-cards-container {
+      display: flex;
+      justify-content: center;
+      /* Center cards initially */
+      gap: 20px;
+      /* Space between cards */
+      padding-bottom: 20px;
+      /* Add padding for scrollbar if it appears */
+      overflow-x: auto;
+      /* Enable horizontal scrolling */
+      -webkit-overflow-scrolling: touch;
+      /* Smooth scrolling on iOS */
+      scrollbar-width: thin;
+      /* Firefox */
+      scrollbar-color: #888 #f1f1f1;
+      /* Firefox */
+    }
+
+    /* Custom scrollbar for Webkit browsers (Chrome, Safari) */
+    .volunteer-cards-container::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .volunteer-cards-container::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    .volunteer-cards-container::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 10px;
+    }
+
+    .volunteer-cards-container::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+
+    .volunteer-card {
+      background-color: #fbf5ff;
+      /* Light purple background */
+      border-radius: 15px;
+      padding: 20px;
+      width: 350px;
+      /* Fixed width for cards */
+      flex-shrink: 0;
+      /* Prevent cards from shrinking */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      min-height: 380px;
+      /* Ensure consistent height for cards */
+    }
+
+    .volunteer-card img {
+      width: 150px;
+      /* Adjust as needed */
+      height: 150px;
+      /* Adjust as needed */
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 4px solid #e0caff;
+      /* Light purple border */
+    }
+
+    .volunteer-card h3 {
+      font-size: 1.4em;
+      color: #5d00a0;
+      /* Dark purple for name */
+      margin-bottom: 5px;
+    }
+
+    .volunteer-card .specialty {
+      font-size: 0.95em;
+      color: #8a2be2;
+      /* Medium purple for specialty */
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .volunteer-card .description {
+      font-size: 0.9em;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .be-a-volunteer-button {
+      background-color: #8a2be2;
+      /* Purple button */
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 25px;
+      font-size: 1.1em;
+      cursor: pointer;
+      margin-top: 40px;
+      transition: background-color 0.3s ease;
+    }
+
+    .be-a-volunteer-button:hover {
+      background-color: #6a0dad;
+      /* Darker purple on hover */
+    }
+
+    /* FAQ Section Styles */
+    .faq-container {
+      display: flex;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      /* Ensures rounded corners are respected */
+    }
+
+    .faq-left {
+      flex: 2;
+      /* Takes up 2/3 of the space */
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      /* Space between FAQ items */
+    }
+
+    .faq-right {
+      flex: 1;
+      /* Takes up 1/3 of the space */
+      background-color: #fff;
+      /* Match background for seamless look */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      box-sizing: border-box;
+      /* Include padding in the width */
+    }
+
+    .faq-right h1 {
+      font-size: 3.5em;
+      /* Adjust as needed */
+      font-weight: 900;
+      /* Very bold */
+      color: #000;
+      text-align: right;
+      /* Aligns text to the right as in the image */
+      line-height: 1.1;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #eee;
+      /* Separator line */
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+      /* No border for the last item */
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .faq-question {
+      background: none;
+      border: none;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #333;
+      width: 100%;
+      text-align: left;
+      padding: 0;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: color 0.3s ease;
+    }
+
+    .faq-question:hover {
+      color: #8a2be2;
+      /* Example hover color */
+    }
+
+    .toggle-icon {
+      font-size: 2em;
+      font-weight: normal;
+      transition: transform 0.3s ease;
+      line-height: 1;
+      /* Ensures icon doesn't add extra height */
+      margin-left: 10px;
+      /* Space between text and icon */
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+      padding-top: 0;
+    }
+
+    .faq-answer p {
+      font-size: 1em;
+      color: #555;
+      line-height: 1.6;
+      margin-top: 10px;
+      /* Space between question and answer text */
+      margin-bottom: 0;
+      padding-right: 20px;
+      /* Keep some space from the right edge */
+    }
+
+    /* Styles for active/open FAQ item */
+    .faq-item.active .faq-question {
+      color: #8a2be2;
+      /* Color when active */
+    }
+
+    .faq-item.active .toggle-icon {
+      transform: rotate(180deg);
+      /* Rotate icon when active */
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 200px;
+      /* Adjust based on expected content height */
+      padding-top: 15px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+      .faq-container {
+        flex-direction: column;
+      }
+
+      .faq-left,
+      .faq-right {
+        flex: none;
+        /* Remove flex grow properties */
+        width: 100%;
+      }
+
+      .faq-right {
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: #f0f2f5;
+        /* Change background for distinction */
+        order: -1;
+        /* Puts the "Frequently Asked Questions" title on top */
+      }
+
+      .faq-right h1 {
+        text-align: center;
+        /* Center the title */
+        font-size: 2.8em;
+      }
+
+      .faq-left {
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+
+      .faq-right h1 {
+        font-size: 2.2em;
+      }
+
+      .faq-left {
+        padding: 15px;
+      }
+
+      .faq-question {
+        font-size: 1.1em;
+      }
+
+      .toggle-icon {
+        font-size: 1.8em;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .faq-right h1 {
+        font-size: 1.8em;
+      }
+
+      .faq-question {
+        font-size: 1em;
+      }
+
+      .toggle-icon {
+        font-size: 1.5em;
+      }
+
+      .faq-answer p {
+        font-size: 0.9em;
+      }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1024px) {
+      .volunteer-cards-container {
+        justify-content: flex-start;
+        /* Align left for smaller screens with scroll */
+      }
+    }
+
+    @media (max-width: 768px) {
+      .section-title {
+        font-size: 2em;
+      }
+
+      .section-subtitle {
+        font-size: 1em;
+      }
+
+      .volunteer-card {
+        width: 220px;
+        min-height: 350px;
+      }
+
+      .volunteer-card img {
+        width: 120px;
+        height: 120px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0;
+      }
+
+      .login-form {
+        margin-top: 15px;
+        margin-right: 0;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+      }
+
+      .login-form .form-group {
+        width: 45%;
+      }
+
+      .login-form button {
+        width: 95%;
+        margin-top: 10px;
+      }
+
+      .menu-bar {
+        flex-direction: column;
+        padding: 10px 0;
+      }
+
+      .menu-bar a {
+        padding: 10px 20px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .menu-bar .divider {
+        display: none;
+      }
+
+      .homepage-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 10px;
+        gap: 30px;
+      }
+
+      .hero-section {
+        max-width: 100%;
+        text-align: center;
+      }
+
+      .welcome-heading {
+        font-size: 40px;
+      }
+
+      .hero-description {
+        font-size: 18px;
+      }
+
+      .REGISTER {
+        max-width: 95vw;
+        padding: 20px;
+      }
+
+    }
+
+    @media (max-width: 480px) {
+      .login-form .form-group {
+        width: 100%;
+      }
+
+      .login-form input,
+      .login-form button {
+        width: 100%;
+      }
+    }
+
+    /* styleguide.css content */
+    :root {
+      --variable-collection-user: initial;
+      --variable-collection-lawyer: initial;
+    }
+
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .footer {
+      background-color: #391053;
+      color: white;
+      padding: 30px 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+      gap: 50px;
+    }
+
+    .footer-branding {
+      display: flex;
+      font-size: 28px;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .footer-logo {
+      width: 150x;
+      height: 100px;
+
+    }
+
+    .footer-branding h2 {
+      font-size: 30px;
+      font-weight: bold;
+      margin-left: -20px;
+    }
+
+    .footer-nav {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      flex: 1 1 0;
+      justify-content: center;
+    }
+
+    .footer-nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 23px;
+      margin: 0 42px;
+      font-weight: bold;
+
+    }
+
+    .divider {
+      height: 53px;
+      width: 2.625px;
+      background-color: white;
+    }
+
+    .footer-bottom {
+      text-align: center;
+    }
+
+    .footer-bottom-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      font-size: 16px;
+    }
+
+    .footer-bottom-row p {
+      margin: 0;
+      white-space: nowrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: white;
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    .to-s {
+      background-color: transparent;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 40px 16px;
+      /* Adds space around the modal */
+      box-sizing: border-box;
+    }
+
+    /* Overlay background */
+    .tos-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(57, 16, 95, 0.4);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .tos-overlay.active {
+      display: flex;
+    }
+
+    /* Modal container */
+    .to-s .div {
+      width: 100%;
+      max-width: 1110px;
+      height: auto;
+      max-height: 90vh;
+      background: #fff;
+      border-radius: 26.63px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(57, 16, 95, 0.2);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 32px 40px;
+      box-sizing: border-box;
+    }
+
+    /* Scrollable content */
+    .to-s .content {
+      flex: 1 1 auto;
+      overflow-y: auto;
+      width: 100%;
+      padding-right: 10px;
+      scrollbar-width: thin;
+      scrollbar-color: #b39ddb #f3e5f5;
+      margin-top: 16px;
+    }
+
+    .to-s .content::-webkit-scrollbar {
+      width: 10px;
+      background: #f3e5f5;
+    }
+
+    .to-s .content::-webkit-scrollbar-thumb {
+      background: #b39ddb;
+      border-radius: 8px;
+    }
+
+    .to-s .welcome-to-wrapper {
+      width: 100%;
+      padding: 0;
+      margin-top: 16px;
+      position: relative;
+    }
+
+    .to-s .welcome-to {
+      position: relative;
+      width: 100%;
+      font-family: "undefined-Regular", Helvetica;
+      font-weight: 300;
+      color: #391053;
+      font-size: 19.2px;
+      line-height: 1.5;
+    }
+
+    .to-s .TOS-header {
+      width: 100%;
+      max-width: 946px;
+      margin: 32px auto 16px;
+      position: relative;
+    }
+
+    .to-s .overlap {
+      width: 100%;
+      max-width: 1110px;
+      height: auto;
+      margin: 0 auto;
+      border-radius: 26.63px 26.63px 0 0;
+      background-color: #ffffff;
+      padding: 32px 40px 0;
+      box-sizing: border-box;
+    }
+
+    .to-s .group {
+      width: 100%;
+      max-width: 950px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .to-s .text-wrapper,
+    .to-s .text-wrapper-2 {
+      font-family: "Inter", Helvetica;
+      color: #39105f;
+      line-height: 1.4;
+    }
+
+    .to-s .text-wrapper {
+      font-weight: 900;
+      font-size: 37.8px;
+      margin-bottom: 8px;
+    }
+
+    .to-s .text-wrapper-2 {
+      font-weight: 700;
+      font-size: 19.2px;
+    }
+
+    .tos-close-btn {
+      position: absolute;
+      top: 16px;
+      right: 24px;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: #39105f;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .volunteer-form-section {
+      background-color: #fff;
+      padding: 40px 60px;
+      /* Adjusted padding to match image */
+      width: 100%;
+      border-radius: 5px;
+      /* Subtle border-radius */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      /* Slightly more prominent shadow */
+      box-sizing: border-box;
+    }
+
+    .volunteer-form-section h1 {
+      text-align: center;
+      color: #000;
+      /* Black color for the title */
+      font-size: 2.5em;
+      /* Larger font size */
+      font-weight: 800;
+      /* Extra bold */
+      margin-bottom: 40px;
+      /* More space below title */
+      letter-spacing: 1.5px;
+      /* Slight letter spacing */
+    }
+
+    .form-grid {
+      display: grid;
+      /* Define specific column templates to match the image layout */
+      grid-template-columns: 2fr 1fr 1fr;
+      /* Left column (photo) wider, then two equal columns */
+      gap: 25px 40px;
+      /* Vertical and horizontal gap */
+      align-items: start;
+      /* Align items to the start of their grid areas */
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Styles for text inputs and textarea */
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"],
+    .form-group input[type="number"],
+    .form-group textarea {
+      padding: 12px 15px;
+      /* More padding */
+      border: 1px solid #ccc;
+      /* Light grey border */
+      border-radius: 3px;
+      /* Slightly less rounded corners for inputs */
+      font-size: 1em;
+      outline: none;
+      /* Remove outline on focus */
+      border: 1px solid #6b21a8;
+      /* Purple border */
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: #8a2be2;
+      /* Darker purple on focus */
+      box-shadow: 0 0 0 2px rgba(138, 43, 226, 0.2);
+      /* Subtle glow on focus */
+    }
+
+    /* Specific grid placements for elements to match image layout */
+    .form-group.photo-upload {
+      grid-column: 1 / 2;
+      /* Spans the first column */
+      grid-row: 1 / span 3;
+      /* Spans multiple rows */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f8f8f8;
+      /* Light background for photo box */
+      border: 1px solid #6b21a8;
+      /* Purple border */
+      border-radius: 5px;
+      min-height: 200px;
+      /* Ensure sufficient height for the photo box */
+      position: relative;
+      /* For icon positioning */
+      cursor: pointer;
+    }
+
+    .form-group.photo-upload input[type="file"] {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .form-group.photo-upload .upload-icon {
+      font-size: 3em;
+      color: #6b21a8;
+    }
+
+    .form-group.last-name {
+      grid-column: 2 / 3;
+      /* Second column */
+    }
+
+    .form-group.first-name {
+      grid-column: 3 / 4;
+      /* Third column */
+    }
+
+    .form-group.email-address {
+      grid-column: 2 / 3;
+      /* Second column */
+    }
+
+    .form-group.contact-number {
+      grid-column: 3 / 4;
+      /* Third column */
+    }
+
+    .form-group.home-address {
+      grid-column: 1 / span 2;
+      /* Spans first two columns */
+    }
+
+    .form-group.years-experience {
+      grid-column: 3 / 4;
+      /* Third column */
+    }
+
+    .form-group.roll-number {
+      grid-column: 1 / 2;
+      /* First column */
+    }
+
+    .form-group.license-upload {
+      grid-column: 2 / span 2;
+      /* Spans second and third columns */
+      border: 1px solid #6b21a8;
+      /* Purple border */
+      border-radius: 3px;
+      padding: 12px 15px;
+      /* Match input padding */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      /* Space out text and icon */
+      cursor: pointer;
+      position: relative;
+      /* For absolute positioning of actual input */
+      color: #555;
+      font-size: 1em;
+    }
+
+    .form-group.license-upload .upload-text {
+      flex-grow: 1;
+      /* Allows text to take available space */
+      margin-right: 10px;
+    }
+
+    .form-group.license-upload .upload-icon {
+      font-size: 1.5em;
+      color: #6b21a8;
+    }
+
+    .form-group.license-upload input[type="file"] {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .form-group.why-volunteer {
+      grid-column: 1 / span 3;
+      /* Spans all three columns */
+    }
+
+    .form-group.why-volunteer textarea {
+      min-height: 120px;
+      /* Increased min-height for textarea */
+      resize: vertical;
+      /* Allow vertical resizing only */
+    }
+
+    .checkbox-section {
+      grid-column: 1 / span 3;
+      /* Spans all three columns */
+      margin-top: 20px;
+      /* Space above checkboxes */
+    }
+
+    .checkbox-group label {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      /* Space between checkboxes */
+      font-size: 1em;
+      color: #333;
+      cursor: pointer;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      margin-right: 10px;
+      width: 20px;
+      /* Custom checkbox size */
+      height: 20px;
+      /* Custom checkbox size */
+      accent-color: #6b21a8;
+      /* Purple color for checked state */
+    }
+
+    .submit-btn {
+      grid-column: 1 / span 3;
+      /* Spans all three columns */
+      width: fit-content;
+      /* Adjust width to content */
+      padding: 15px 40px;
+      /* Larger padding for button */
+      background-color: #6b21a8;
+      /* Darker purple */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      /* Match input border-radius */
+      font-size: 1.1em;
+      font-weight: 600;
+      cursor: pointer;
+      margin: 30px auto;
+      /* Center button and add margin top */
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #8a2be2;
+      /* Lighter purple on hover */
+      transform: translateY(-2px);
+      /* Slight lift on hover */
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 900px) {
+      .volunteer-form-section {
+        padding: 30px 40px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr 1fr;
+        /* Two columns */
+        gap: 20px 30px;
+      }
+
+      .form-group.photo-upload {
+        grid-column: 1 / span 2;
+        /* Spans both columns at the top */
+        grid-row: auto;
+        /* Allow auto row placement */
+        min-height: 180px;
+      }
+
+      .form-group.last-name,
+      .form-group.first-name,
+      .form-group.email-address,
+      .form-group.contact-number,
+      .form-group.years-experience,
+      .form-group.roll-number {
+        grid-column: auto;
+        /* Auto placement within two columns */
+      }
+
+      .form-group.home-address,
+      .form-group.license-upload,
+      .form-group.why-volunteer,
+      .checkbox-section,
+      .submit-btn {
+        grid-column: 1 / span 2;
+        /* Spans both columns */
+      }
+    }
+
+    @media (max-width: 600px) {
+      .volunteer-form-section {
+        padding: 20px 20px;
+      }
+
+      .volunteer-form-section h1 {
+        font-size: 2em;
+        margin-bottom: 30px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+        /* Single column layout */
+        gap: 15px;
+      }
+
+      .form-group.photo-upload,
+      .form-group.last-name,
+      .form-group.first-name,
+      .form-group.email-address,
+      .form-group.contact-number,
+      .form-group.home-address,
+      .form-group.years-experience,
+      .form-group.roll-number,
+      .form-group.license-upload,
+      .form-group.why-volunteer,
+      .checkbox-section,
+      .submit-btn {
+        grid-column: 1 / 2;
+        /* All items span single column */
+      }
+
+      .form-group.photo-upload {
+        min-height: 150px;
+      }
+
+      .submit-btn {
+        padding: 12px 30px;
+        font-size: 1em;
+      }
+
+      .checkbox-group label {
+        font-size: 0.9em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="branding">
+        <img src="https://i.ibb.co/qYYZs46L/logo.png" alt="LOGO" class="LOGO" />
+        <h1>SafeSpace PH</h1>
+      </div>
+      <form class="login-form">
+        <div class="form-group">
+          <label for="email-login">EMAIL</label>
+          <input type="email" id="email-login" name="email-login">
+        </div>
+        <div class="form-group">
+          <label for="password-login">PASSWORD</label>
+          <input type="password" id="password-login" name="password-login">
+        </div>
+        <button type="submit">SIGN IN</button>
+      </form>
+    </header>
+  </div>
+  <nav class="menu-bar">
+    <a href="homepage (1).html">HOME</a>
+    <div class="divider"></div>
+    <a href="volunteer.html">VOLUNTEER</a>
+    <div class="divider"></div>
+    <a href="aboutUs.html">ABOUT US</a>
+  </nav>
+  </div>
+
+  <section class="volunteer-form-section">
+    <h1>VOLUNTEER APPLICATION</h1>
+    <form>
+      <div class="form-grid">
+
+        <div class="form-group photo-upload">
+          <input type="file" id="uploadPhoto" accept="image/*">
+          <label for="uploadPhoto" class="upload-icon-container">
+            <i class="fas fa-cloud-upload-alt upload-icon"></i>
+          </label>
+        </div>
+
+        <div class="form-group last-name">
+          <input type="text" placeholder="LAST NAME" aria-label="Last Name">
+        </div>
+
+        <div class="form-group first-name">
+          <input type="text" placeholder="FIRST NAME" aria-label="First Name">
+        </div>
+
+        <div class="form-group email-address">
+          <input type="email" placeholder="EMAIL ADDRESS" aria-label="Email Address">
+        </div>
+
+        <div class="form-group contact-number">
+          <input type="tel" placeholder="CONTACT NUMBER" aria-label="Contact Number">
+        </div>
+
+        <div class="form-group home-address">
+          <input type="text" placeholder="HOME ADDRESS" aria-label="Home Address">
+        </div>
+
+        <div class="form-group years-experience">
+          <input type="number" placeholder="YEARS OF EXPERIENCE" aria-label="Years of Experience">
+        </div>
+
+        <div class="form-group roll-number">
+          <input type="text" placeholder="ROLL OF ATTORNEYS NUMBER" aria-label="Roll of Attorneys Number">
+        </div>
+
+        <div class="form-group license-upload">
+          <input type="file" id="uploadLicense" accept=".pdf, .doc, .docx, .jpg, .png">
+          <label for="uploadLicense">
+            <span class="upload-text">UPLOAD LICENSE OR CERTIFICATION</span>
+            <i class="fas fa-cloud-upload-alt upload-icon"></i>
+          </label>
+        </div>
+
+        <div class="form-group why-volunteer">
+          <textarea rows="4" placeholder="WHY DO YOU WANT TO VOLUNTEER OR WORK WITH US? (OPTIONAL)"
+            aria-label="Why do you want to volunteer or work with us?"></textarea>
+        </div>
+
+        <div class="checkbox-section">
+          <div class="checkbox-group">
+            <label>
+              <input type="checkbox" name="certify_accurate"> I CERTIFY THAT THE INFORMATION PROVIDED IS ACCURATE
+            </label>
+            <label>
+              <input type="checkbox" name="consent_background_checks"> I CONSENT TO BACKGROUND CHECKS
+            </label>
+            <label>
+              <input type="checkbox" name="agree_terms_conditions"> I AGREE TO THE TERMS AND CONDITIONS
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">SUBMIT APPLICATION</button>
+    </form>
+  </section>
+
+  <main class="volunteers-section">
+    <h2 class="section-title">Our Volunteers for Justice</h2>
+    <p class="section-subtitle">Meet the lawyers making a difference with SafeSpace PH.</p>
+
+    <div class="volunteer-cards-container">
+      <div class="volunteer-card">
+        <img src="https://imgur.com/W0EvqFj.jpg" alt="Atty. Miguel Torres">
+        <h3>Atty. Miguel Torres</h3>
+        <p class="specialty">Human Rights Specialist</p>
+        <p class="description">Defending equality with 15+ years of expertise</p>
+      </div>
+
+      <div class="volunteer-card">
+        <img src="https://imgur.com/jqGiywa.jpg" alt="Atty. Sofia Rivera">
+        <h3>Atty. Sofia Rivera</h3>
+        <p class="specialty">Gender Rights Advocate</p>
+        <p class="description">Fighting for victims' rights with 12+ years of experience.</p>
+      </div>
+
+      <div class="volunteer-card">
+        <img src="https://imgur.com/M315Bkj.jpg" alt="Atty. Rafael Lim">
+        <h3>Atty. Rafael Lim</h3>
+        <p class="specialty">Online Harassment Specialist</p>
+        <p class="description">Championing justice for digital safe Spaces Act violations.</p>
+      </div>
+
+      <div class="volunteer-card">
+        <img src="https://imgur.com/MQJ6lzE.jpg" alt="Atty. Sofia Rivera">
+        <h3>Atty. Sofia Rivera</h3>
+        <p class="specialty">Youth Rights Defender</p>
+        <p class="description">Protecting students and professionals from abuse and misconduct.</p>
+      </div>
+    </div>
+
+    <button class="be-a-volunteer-button">Be a Volunteer</button>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-branding">
+          <img src="https://i.ibb.co/qYYZs46L/logo.png" alt="LOGO" class="footer-logo" />
+          <h2>SafeSpace PH</h2>
+        </div>
+        <nav class="footer-nav">
+          <a href="homepage (1).html">HOME</a>
+          <div class="divider"></div>
+          <a href="#">VOLUNTEER</a>
+          <div class="divider"></div>
+          <a href="aboutUs.html">ABOUT US</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-row">
+          <p>&copy; 2025 SafeSpace PH. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+
+    function openTOS() {
+      document.getElementById('tosOverlay').classList.add('active');
+    }
+
+    function closeTOS() {
+      document.getElementById('tosOverlay').classList.remove('active');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const faqQuestions = document.querySelectorAll('.faq-question');
+
+      faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+          const faqItem = question.closest('.faq-item');
+          const faqAnswer = faqItem.querySelector('.faq-answer');
+
+          // Close all other open answers
+          document.querySelectorAll('.faq-item.active').forEach(item => {
+            if (item !== faqItem) {
+              item.classList.remove('active');
+              item.querySelector('.faq-answer').style.maxHeight = 0;
+              item.querySelector('.faq-answer').style.paddingTop = 0;
+            }
+          });
+
+          // Toggle the clicked answer
+          if (faqItem.classList.contains('active')) {
+            faqItem.classList.remove('active');
+            faqAnswer.style.maxHeight = 0;
+            faqAnswer.style.paddingTop = 0;
+          } else {
+            faqItem.classList.add('active');
+            // Set max-height to the scrollHeight to allow smooth transition to full height
+            // A fixed max-height can be problematic if content varies greatly.
+            // A better approach for dynamic content is to set it to scrollHeight + some buffer.
+            faqAnswer.style.maxHeight = faqAnswer.scrollHeight + 30 + 'px'; // +30px for padding/buffer
+            faqAnswer.style.paddingTop = '15px';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
